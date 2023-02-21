@@ -7,7 +7,6 @@ public class BuildingMaker : MonoBehaviour
 {
     public Material building;
 
-
     public IEnumerator Make(MapReader map, MapSettings set, GameObject parentObj, Vector3 buildingPos)
     {
         if(map.mapData==null){
@@ -53,6 +52,7 @@ public class BuildingMaker : MonoBehaviour
                 //magnitude horizontal  
                 v1.x*=set.mag_h; v1.z*=set.mag_h;
                 v2.x*=set.mag_h; v2.z*=set.mag_h;
+
 
                 Vector3 v3 = v1 + new Vector3(0, way.Height, 0);
                 Vector3 v4 = v2 + new Vector3(0, way.Height, 0);

@@ -76,7 +76,12 @@ public class OSMway: OSM_Func
             {
                 Leisure = GetAttribute<string>("v", t.Attributes);;
             }
-            else{//if not above, debug tag k(key)
+            else if (key == "natural")
+            {
+                Nature = GetAttribute<string>("v", t.Attributes); ;
+            }
+            else
+            {//if not above, debug tag k(key)
                 //Debug.Log(key+" is not expected");
             }
 
